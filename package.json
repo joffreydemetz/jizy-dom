@@ -2,6 +2,7 @@
   "name": "jizy-dom",
   "version": "1.0.1",
   "description": "My own DOM utility",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/joffreydemetz/jizy-dom/issues"
   },
-  "homepage": "https://github.com/joffreydemetz/jizy-dom#readme"
+  "homepage": "https://github.com/joffreydemetz/jizy-dom#readme",
+  "directories": {
+    "lib": "lib"
+  }
 }
