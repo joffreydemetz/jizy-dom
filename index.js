@@ -1,6 +1,6 @@
 import { Selector } from './lib/Selector.js';
 import { DOM } from './lib/Core.js';
-import { domUtils } from './lib/Utils.js';
+import { domUtils } from './lib/utils.js';
 import { extendDOMAttributes } from './lib/attributes.js';
 import { extendDOMManipulation } from './lib/manipulation.js';
 import { extendDOMAccess } from './lib/access.js';
@@ -10,6 +10,7 @@ import { extendDOMEvents } from './lib/events.js';
 import { extendDOMAnimations } from './lib/animations.js';
 import { extendDOMSwipe } from './lib/swipe.js';
 import { extendDOMMisc } from './lib/misc.js';
+
 
 const jDOM = function(selector, context) {
 	return new DOM(selector, context);
@@ -44,18 +45,20 @@ const jDOMcreate = function(tag, attrs = {}) {
 
 	return wrapped;
 };
-const JiZyDOM = {
-    jDOM, 
-    Selector, 
-    domUtils, 
+
+export {
+    Selector,
     DOM,
-    jDOM,
-    jDOMplugin,
-    jDOMcreate,
-    extendDOMAttributes, extendDOMManipulation, extendDOMAccess, 
-    extendDOMTraversal, extendDOMContents, extendDOMEvents, 
-    extendDOMAnimations, extendDOMSwipe, extendDOMMisc 
+    domUtils,
+    extendDOMAttributes,
+    extendDOMManipulation,
+    extendDOMAccess,
+    extendDOMTraversal,
+    extendDOMContents,
+    extendDOMEvents,
+    extendDOMAnimations,
+    extendDOMSwipe,
+    extendDOMMisc
 };
-
-export  default JiZyDOM;
-
+export { jDOM, jDOMplugin, jDOMcreate };
+export default DOM;

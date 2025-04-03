@@ -4,16 +4,19 @@
   "description": "My own DOM utility",
   "type": "module",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel . --out-dir dist --ignore node_modules,dist",
+    "test": "echo 'Add tests here if needed'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joffreydemetz/jizy-dom.git"
   },
   "keywords": [
-    "DOM",
-    "Jizy"
+    "dom",
+    "manipulation",
+    "library"
   ],
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/jizy-modalizer/)",
   "license": "MIT",
@@ -23,5 +26,10 @@
   "homepage": "https://github.com/joffreydemetz/jizy-dom#readme",
   "directories": {
     "lib": "lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9"
   }
 }
