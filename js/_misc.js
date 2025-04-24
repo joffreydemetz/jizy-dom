@@ -1,4 +1,4 @@
-import { domUtils } from './utils.js';
+import { domUtils } from '../utils.js';
 
 export function extendDOMMisc(DOM) {
 	DOM.prototype.toggle = function() {

@@ -1,4 +1,4 @@
-import { domUtils } from './utils.js';
+import { domUtils } from '../utils.js';
 
 export function extendDOMAttributes(DOM) {
 	const { dasherize, camelize, deserializeValue, setAttr, propMap } = domUtils;
@@ -68,7 +68,13 @@ export function extendDOMAttributes(DOM) {
 	DOM.prototype.attr = function(name, value) {
 		if (arguments.length === 2) {
 			return this.each(el => {
-				if (el.nodeType === 1) setAttr(el, name, value);
+				if (el.nodeType === 1) {
+					if (value == null) {
+						el.removeAttribute(name);
+					} else {
+						el.setAttribute(name, value);
+					}
+				}
 			});
 		}
 		const el = this.elems[0];

@@ -1,4 +1,4 @@
-import { domUtils } from './utils.js';
+import { domUtils } from '../utils.js';
 
 export function extendDOMEvents(DOM) {
 	DOM.prototype.on = function(events, callback, options = false) {
