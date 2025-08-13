@@ -4,6 +4,10 @@
   "browser": "dist/js/jizy-dom.min.js",
   "main": "lib/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joffreydemetz/jizy-dom"
+  },
   "scripts": {
     "test": "jest",
     "dist": "node cli/dist.js",
@@ -13,6 +17,12 @@
   "keywords": [
     "JiZy",
     "DOM"
+  ],
+  "files": [
+    "dist/jizy-dom.min.js",
+    "lib/js/dom.js",
+    "lib/js/selector.js",
+    "lib/index.js"
   ],
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
