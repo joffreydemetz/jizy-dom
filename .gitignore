@@ -1,12 +1,7 @@
-/dist
-/node_modules
-/vendor
-/tests 
-
-.vscode
-.env
-composer.json
+node_modules/
 composer.lock
 package-lock.json
-tsconfig.json
-tsup.config.ts
+test/
+vendor/
+lib/_jizy.js
+lib/js/index.js
