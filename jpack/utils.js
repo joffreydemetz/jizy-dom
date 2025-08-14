@@ -288,10 +288,26 @@ export function generateWrappedJs(code, config, onGenerateWrappedJs = null) {
 
     const date = new Date();
     const wrapper = fs.readFileSync(config.wrapperPath, 'utf8');
-    let wrapped = wrapper.replace('// @CODE', code)
-        .replace(/@VERSION/g, config.version)
-        .replace(/@BUNDLE/g, config.buildName)
-        .replace(/@DATE/g, date.toISOString().replace(/:\d+\.\d+Z$/, "Z"));
+
+    const marker = '// @CODE';
+    const codePosition = wrapper.indexOf(marker);
+    if (codePosition === -1) {
+        console.error('Error: "// @CODE" not found in wrapper file');
+        process.exit(1);
+    }
+
+    // Insert code after the marker (keeping the marker and its line)
+    const markerEnd = codePosition + marker.length;
+    // Find the end of the line (so code is inserted after the marker's line)
+    const lineEnd = wrapper.indexOf('\n', markerEnd);
+    let insertPos = lineEnd !== -1 ? lineEnd + 1 : markerEnd;
+
+    let wrapped = wrapper.slice(0, insertPos) + code + '\n' + wrapper.slice(insertPos);
+
+    wrapped = wrapped.replace(marker, '');
+    wrapped = wrapped.replace(/@VERSION/g, config.version);
+    wrapped = wrapped.replace(/@BUNDLE/g, config.buildName);
+    wrapped = wrapped.replace(/@DATE/g, date.toISOString().replace(/:\d+\.\d+Z$/, "Z"));
 
     if (typeof onGenerateWrappedJs === 'function') {
         wrapped = onGenerateWrappedJs(wrapped, config);
