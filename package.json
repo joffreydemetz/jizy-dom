@@ -1,6 +1,6 @@
 {
   "name": "jizy-dom",
-  "version": "2.1.1",
+  "version": "2.1.4",
   "browser": "dist/js/jizy-dom.min.js",
   "main": "lib/index.js",
   "type": "module",
@@ -26,7 +26,7 @@
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "A lightweight DOM manipulation library",
-  "dependencies": {
-    "jizy-packer": "^2.1.0"
+  "devDependencies": {
+    "jizy-packer": "^2.1.44"
   }
 }
