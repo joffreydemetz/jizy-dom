@@ -26,6 +26,7 @@
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "A lightweight DOM manipulation library",
+  "homepage": "https://jizy.joffreydemetz.com/dom",
   "devDependencies": {
     "jizy-packer": "^2.1.44"
   }
