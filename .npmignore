@@ -1,2 +1,7 @@
+build/
+cli/
+config/
 node_modules/
+tests/
+vitest.config.js
 package-lock.json
