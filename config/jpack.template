@@ -1,3 +1,4 @@
 import DOM from '{{PREFIX}}lib/js/dom.js';
+import '{{PREFIX}}lib/js/jdom.js';
 
 export default DOM;
