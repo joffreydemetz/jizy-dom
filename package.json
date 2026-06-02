@@ -1,6 +1,6 @@
 {
   "name": "jizy-dom",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "browser": "dist/js/jizy-dom.min.js",
   "main": "lib/index.js",
   "type": "module",
