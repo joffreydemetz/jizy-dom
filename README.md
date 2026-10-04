@@ -151,7 +151,6 @@ the elements they have processed, so calling them again on the same elements is 
 | `blockFitWidth` | `.blockFitWidth({ offset: 0 })` | Negative side margins so a block bleeds over its `.container` padding (`data-nopadding` skips the inner padding). |
 | `checkboxMaxSelection` | `.checkboxMaxSelection()` | On a container with `data-max-selection="n"`: disables the unchecked boxes once `n` are checked. |
 | `confirm` | `.confirm(params)` | Clicking a `[data-confirm]` element opens `Modalizer.confirm(el, params)` (the jizy-modalizer `confirm` plugin). |
-| `hasher` | `.hasher(config)` | Legacy: relies on `JiZy.Hasher` and `JiZy.Modalizer.loadHash`, which current jizy-factory / jizy-modalizer releases do not provide. |
 | `hrefData` | `.hrefData()` | Clicking the element navigates to its `data-href`. |
 | `limitLinkText` | `.limitLinkText({ maxLength: 47 })` | Truncates links whose text is their own URL (`data-maxlength` overrides). |
 | `linker` | `.linker()` | Clicking `[data-linker="x"]` clicks `[data-slug="x"]`. |
